@@ -22,13 +22,22 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#include "Arduino.h"
-
-#include "Wire.h"
-
 #include "SeeedGrayOLED.h"
 
+#if defined (SPARK)
+#else
+#include <Wire.h>
+#ifdef __AVR__
 #include <avr/pgmspace.h>
+#endif
+
+#if ARDUINO >= 100
+#include "Arduino.h"
+#else
+#include "WProgram.h"
+#endif
+#endif //Spark
+
 
 #if defined(__arm__) && !defined(PROGMEM)
   #define PROGMEM

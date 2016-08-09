@@ -27,7 +27,11 @@
 
 // SeeedGrayOLED Instruction set addresses
 
-#include "Arduino.h"
+#if defined (SPARK)
+#include "application.h"
+#else
+#include <Wire.h>
+#endif
 
 #define VERTICAL_MODE                       01
 #define HORIZONTAL_MODE                     02
