@@ -1,3 +1,5 @@
+Modify source code and support Particle library from Seeed Studio.
+
 ##OLED_Display_96X96
 ![image](http://www.seeedstudio.com/wiki/images/9/90/Oled1281281.jpg)
 
