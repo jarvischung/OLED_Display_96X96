@@ -1,16 +1,15 @@
-#include <Wire.h>
 #include <Grove_OLED_Display_96X96.h>
-#include <avr/pgmspace.h>
 
 
 void setup()
 {
   Wire.begin();
-  SeeedGrayOled.init();             //initialize SEEED OLED display
-  SeeedGrayOled.clearDisplay();     //Clear Display.
-  SeeedGrayOled.setNormalDisplay(); //Set Normal Display Mode
-  SeeedGrayOled.setVerticalMode();  // Set to vertical mode for displaying text
-  
+  Serial.begin(9600);
+  SeeedGrayOled.init();                 // initialize SEEED OLED display
+  SeeedGrayOled.setInverseDisplay();    // Set display to inverse mode
+  SeeedGrayOled.clearDisplay();         // Clear Display.
+  SeeedGrayOled.setVerticalMode();      // Set to vertical mode for displaying text
+
   for(char i=0; i < 12 ; i++)
   {
   SeeedGrayOled.setTextXY(i,0);  //set Cursor to ith line, 0th column

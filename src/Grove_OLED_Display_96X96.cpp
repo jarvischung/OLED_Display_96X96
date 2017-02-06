@@ -25,6 +25,7 @@
 #include "Grove_OLED_Display_96X96.h"
 
 #if defined (SPARK)
+#include "application.h"
 #else
 #include <Wire.h>
 #ifdef __AVR__

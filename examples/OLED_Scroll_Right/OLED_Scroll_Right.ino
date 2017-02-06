@@ -1,6 +1,4 @@
-#include <Wire.h>
 #include <Grove_OLED_Display_96X96.h>
-#include <avr/pgmspace.h>
 
 static const unsigned char SeeedLogo[] PROGMEM = 
 {

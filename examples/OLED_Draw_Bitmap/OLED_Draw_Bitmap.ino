@@ -1,6 +1,4 @@
-#include <Wire.h>
 #include <Grove_OLED_Display_96X96.h>
-#include <avr/pgmspace.h>
 
 static const unsigned char SeeedLogo[] PROGMEM = 
 {
@@ -83,14 +81,18 @@ void setup()
 {
   Wire.begin();	
   SeeedGrayOled.init();  		         // initialize SEEED OLED display
-  SeeedGrayOled.setInverseDisplay();             // Set Display to inverse mode  
+  
   SeeedGrayOled.clearDisplay();                  //  clear the screen and set start position to top left corner
-  SeeedGrayOled.drawBitmap(SeeedLogo,96*96/8);   // (96 pixels *96 pixels  / 8) bytes
+  //Draw binary Bitmap
+  SeeedGrayOled.drawBitmap(SeeedLogo,96*96/8);   //  Draw binary Bitmap (96 pixels *96 pixels  / 8) bytes
 }
 
 void loop()
 {
   
 }
+
+
+
 
 
